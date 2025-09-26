@@ -112,9 +112,22 @@ const CategoryPage: React.FC = () => {
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`} />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-6xl opacity-50">
-                        {project.category === "Blockchain" ? "🔗" : 
+                        {project.id === "trustchainvault" ? "📦" : 
+                         project.id === "v-dex" ? "💱" :
+                         project.id === "techvitta-main" ? "🏢" :
+                         project.id === "hrms" ? "👥" :
+                         project.id === "techvittahms" ? "🏥" :
+                         project.id === "nurseryshop" ? "🌱" :
+                         project.id === "pulasa" ? "🐟" :
+                         project.id === "fishpulusu" ? "🍲" :
+                         project.id === "macroworkers" ? "💼" :
+                         project.id === "macrostudents" ? "🎓" :
+                         project.category === "Blockchain" ? "🔗" : 
                          project.category === "Community" ? "👥" :
-                         project.category === "Education" ? "🎓" : "💰"}
+                         project.category === "Education" ? "🎓" : 
+                         project.category === "Business" ? "💼" :
+                         project.category === "Healthcare" ? "🏥" :
+                         project.category === "E-commerce" ? "🛒" : "💰"}
                       </div>
                     </div>
                     
@@ -239,9 +252,22 @@ const CategoryPage: React.FC = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${selectedProject.gradient} opacity-20`} />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-8xl opacity-50">
-                    {selectedProject.category === "Blockchain" ? "🔗" : 
+                    {selectedProject.id === "trustchainvault" ? "📦" : 
+                     selectedProject.id === "v-dex" ? "💱" :
+                     selectedProject.id === "techvitta-main" ? "🏢" :
+                     selectedProject.id === "hrms" ? "👥" :
+                     selectedProject.id === "techvittahms" ? "🏥" :
+                     selectedProject.id === "nurseryshop" ? "🌱" :
+                     selectedProject.id === "pulasa" ? "🐟" :
+                     selectedProject.id === "fishpulusu" ? "🍲" :
+                     selectedProject.id === "macroworkers" ? "💼" :
+                     selectedProject.id === "macrostudents" ? "🎓" :
+                     selectedProject.category === "Blockchain" ? "🔗" : 
                      selectedProject.category === "Community" ? "👥" :
-                     selectedProject.category === "Education" ? "🎓" : "💰"}
+                     selectedProject.category === "Education" ? "🎓" : 
+                     selectedProject.category === "Business" ? "💼" :
+                     selectedProject.category === "Healthcare" ? "🏥" :
+                     selectedProject.category === "E-commerce" ? "🛒" : "💰"}
                   </div>
                 </div>
               </div>
