@@ -22,8 +22,8 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
       transition={{ duration: 0.8 }}
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
             isScrolled 
-              ? 'bg-gray-900/98 backdrop-blur-lg border-b border-gray-700 shadow-lg' 
-              : 'bg-gray-900/90 backdrop-blur-md'
+              ? 'bg-white/98 backdrop-blur-lg border-b border-gray-300 shadow-lg' 
+              : 'bg-white/90 backdrop-blur-md'
           }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
@@ -47,7 +47,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
                 key={index}
                 href={item.href}
                 whileHover={{ y: -2 }}
-                className="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group"
+                className="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium relative group"
               >
                 {item.label}
               </motion.a>
@@ -59,7 +59,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-gray-300"
+                className="lg:hidden p-2 text-gray-700"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -81,7 +81,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 whileHover={{ x: 5 }}
-                className="block text-gray-300 hover:text-white transition-colors duration-300 font-medium"
+                className="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium"
               >
                 {item.label}
               </motion.a>
