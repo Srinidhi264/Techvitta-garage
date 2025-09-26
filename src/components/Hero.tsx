@@ -39,8 +39,7 @@ const Hero: React.FC = () => {
                 Welcome to
               </span>
               <h1 className="text-7xl lg:text-9xl font-black text-gray-900 leading-none" style={{ textDecoration: 'none' }}>
-                TechVitta
-                <span className="block text-6xl lg:text-8xl text-gray-600 mt-2">Garage</span>
+                TechVitta <span className="text-6xl lg:text-8xl text-gray-600">Garage</span>
               </h1>
             </div>
           </motion.div>
