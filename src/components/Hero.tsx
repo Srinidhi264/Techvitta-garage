@@ -151,36 +151,84 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Animated Progress Indicators */}
+          {/* Animated Technology Stack */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 4.2 }}
-            className="flex justify-center space-x-8 mt-12"
+            className="mt-12"
           >
-            {[
-              { label: "Projects", value: 8 },
-              { label: "Years", value: 3 },
-              { label: "Clients", value: 50 }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.6, delay: 4.5 + (index * 0.2) }}
-                className="text-center"
-              >
+            <motion.h4
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 4.5 }}
+              className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-6"
+            >
+              Core Technologies
+            </motion.h4>
+            
+            <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+              {[
+                "Blockchain", "Smart Contracts", "Web3", "DeFi", 
+                "React", "Node.js", "Solidity", "Ethereum"
+              ].map((tech, index) => (
                 <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.8, delay: 4.8 + (index * 0.2) }}
-                  className="w-16 h-16 border-2 border-gray-300 rounded-full flex items-center justify-center mb-2"
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 4.8 + (index * 0.1),
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    repeatDelay: 3 + (index * 0.5)
+                  }}
+                  className="px-4 py-2 border border-gray-300 bg-white/50 backdrop-blur-sm text-gray-600 text-sm font-medium rounded-full hover:border-gray-400 transition-all duration-300"
                 >
-                  <span className="text-lg font-bold text-gray-700">{item.value}+</span>
+                  {tech}
                 </motion.div>
-                <span className="text-xs text-gray-500 uppercase tracking-wider">{item.label}</span>
-              </motion.div>
-            ))}
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Animated Quote Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 5.5 }}
+            className="mt-16 max-w-4xl mx-auto"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 5.8 }}
+              className="relative"
+            >
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 1.5, delay: 6 }}
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gray-300"
+              />
+              
+              <motion.blockquote
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 6.2 }}
+                className="text-lg italic text-gray-600 leading-relaxed text-center py-8"
+              >
+                "The future of business lies not in replacing existing systems, 
+                but in seamlessly integrating blockchain technology to enhance 
+                what already works."
+              </motion.blockquote>
+              
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 1.5, delay: 6.5 }}
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gray-300"
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
