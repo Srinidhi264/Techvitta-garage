@@ -60,7 +60,7 @@ export const projects: Project[] = [
     category: "Business",
     description: "Human Resource Management System for efficient workforce management",
     longDescription: "HRMS.techvitta.in is a comprehensive Human Resource Management System designed to streamline HR operations. It provides tools for employee management, payroll processing, attendance tracking, and performance evaluation, making it easier for organizations to manage their workforce effectively.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
+    image: "/images/hrms-preview.jpg",
     link: "https://hrms.techvitta.in",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
     gradient: "from-gray-400 to-gray-500",
