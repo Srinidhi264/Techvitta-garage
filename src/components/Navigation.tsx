@@ -16,6 +16,18 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
 
   const isScrolled = scrollY > 50
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    setIsMenuOpen(false)
+  }
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -47,8 +59,9 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
               <motion.a
                 key={index}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 whileHover={{ y: -2 }}
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium relative group"
+                className="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium relative group cursor-pointer"
               >
                 {item.label}
               </motion.a>
@@ -80,9 +93,9 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
               <motion.a
                 key={index}
                 href={item.href}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, item.href)}
                 whileHover={{ x: 5 }}
-                className="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium"
+                className="block text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium cursor-pointer"
               >
                 {item.label}
               </motion.a>

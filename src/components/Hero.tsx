@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Hero: React.FC = () => {
   return (
-        <section id="portfolio" className="relative pt-32 pb-16 px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        <section id="hero" className="relative pt-32 pb-16 px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Static Background Elements */}
       <div className="absolute inset-0">
         {/* Subtle Grid Pattern */}
@@ -138,10 +138,6 @@ const Hero: React.FC = () => {
               transition={{ duration: 1.2, delay: 3.3 }}
               className="max-w-3xl mx-auto"
             >
-              <p className="text-base text-gray-600 leading-relaxed mb-4">
-                Transforming complex blockchain technology into accessible, 
-                practical solutions that drive real-world value.
-              </p>
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
@@ -225,16 +221,6 @@ const Hero: React.FC = () => {
                 className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gray-300"
               />
               
-              <motion.blockquote
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 6.2 }}
-                className="text-lg italic text-gray-600 leading-relaxed text-center py-8"
-              >
-                "The future of business lies not in replacing existing systems, 
-                but in seamlessly integrating blockchain technology to enhance 
-                what already works."
-              </motion.blockquote>
               
               <motion.div
                 initial={{ scaleX: 0 }}

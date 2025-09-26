@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
 
 
   return (
-        <footer className="bg-gray-100 py-16 px-6 lg:px-12">
+        <footer id="contact" className="bg-gray-100 py-16 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
@@ -117,9 +117,9 @@ const Footer: React.FC = () => {
           className="glass p-8 mb-12 border border-gray-300"
         >
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Stay Updated</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Stay Connected</h3>
             <p className="text-gray-600 mb-6">
-              Get the latest Web3 insights, project updates, and industry news delivered to your inbox.
+              Get the latest blockchain solutions, TechVitta project updates, and practical Web3 insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

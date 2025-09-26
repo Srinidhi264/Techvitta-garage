@@ -8,7 +8,7 @@ const Portfolio: React.FC = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="py-24 px-6 lg:px-12 bg-gray-50">
+    <section id="portfolio" ref={ref} className="py-24 px-6 lg:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
