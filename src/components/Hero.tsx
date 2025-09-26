@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Hero: React.FC = () => {
   return (
-        <section id="portfolio" className="relative min-h-screen flex items-center px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        <section id="portfolio" className="relative pt-32 pb-16 px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Static Background Elements */}
       <div className="absolute inset-0">
         {/* Subtle Grid Pattern */}
@@ -55,6 +55,63 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Formal Animation Section */}
+      <div className="relative z-10 max-w-7xl mx-auto mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 1.2 }}
+          className="text-center"
+        >
+          {/* Animated Line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 2, delay: 1.5 }}
+            className="w-24 h-0.5 bg-gray-300 mx-auto mb-8 origin-center"
+          />
+          
+          {/* Animated Text */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2 }}
+            className="space-y-4"
+          >
+            <h3 className="text-lg font-medium text-gray-600 tracking-wider uppercase">
+              Building Tomorrow's Solutions Today
+            </h3>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+              Through innovative blockchain technology and community-driven platforms, 
+              we create practical solutions that empower businesses and individuals.
+            </p>
+          </motion.div>
+
+          {/* Animated Dots */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 2.5 }}
+            className="flex justify-center space-x-2 mt-8"
+          >
+            {[0, 1, 2].map((index) => (
+              <motion.div
+                key={index}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ 
+                  duration: 0.3, 
+                  delay: 2.7 + (index * 0.1),
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  repeatDelay: 1
+                }}
+                className="w-2 h-2 bg-gray-400 rounded-full"
+              />
+            ))}
+          </motion.div>
+        </motion.div>
+      </div>
 
     </section>
   )
