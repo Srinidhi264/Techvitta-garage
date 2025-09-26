@@ -4,13 +4,8 @@ import { motion } from 'framer-motion'
 const Hero: React.FC = () => {
   return (
         <section id="portfolio" className="relative min-h-screen flex items-center px-6 lg:px-12 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
-      {/* Modern Background Elements */}
+      {/* Static Background Elements */}
       <div className="absolute inset-0">
-        {/* Gradient Orbs */}
-        <div className="absolute top-20 left-20 w-72 h-72 bg-gray-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gray-100 rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-pulse" style={{ animationDelay: '4s' }}></div>
-        
         {/* Subtle Grid Pattern */}
         <div 
           className="absolute inset-0 opacity-5"
@@ -28,7 +23,12 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
-          <div className="relative mb-8">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative mb-8"
+          >
             <div className="inline-block">
               <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4 block">
                 Welcome to
@@ -37,15 +37,20 @@ const Hero: React.FC = () => {
                 TechVitta <span className="text-5xl lg:text-7xl text-gray-600">Garage</span>
               </h1>
             </div>
-          </div>
+          </motion.div>
 
           {/* Subtitle */}
-          <div className="relative mb-12">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="relative mb-12"
+          >
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium max-w-2xl mx-auto">
               A living portfolio of blockchain apps, community platforms,<br />
               and business tools we've built.
             </p>
-          </div>
+          </motion.div>
 
         </div>
       </div>
