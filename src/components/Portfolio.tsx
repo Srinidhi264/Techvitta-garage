@@ -17,7 +17,7 @@ const Portfolio: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
-            Our <span className="text-blue-600">Portfolio</span>
+            Our <span className="text-gray-600">Portfolio</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
             Explore our diverse portfolio of blockchain solutions, educational platforms, and community-driven applications
@@ -44,16 +44,16 @@ const Portfolio: React.FC = () => {
                 >
                   <Link
                     to={`/portfolio/${category.id}`}
-                        className="block glass border border-gray-200 hover:border-blue-400 transition-all duration-300 group shadow-md hover:shadow-lg"
+                        className="block glass border border-gray-200 hover:border-gray-400 transition-all duration-300 group shadow-md hover:shadow-lg"
                   >
                     <div className="p-6 text-center">
                       {/* Category Icon */}
-                      <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-blue-100 border border-blue-200 group-hover:bg-blue-200 transition-all duration-300">
+                      <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gray-100 border border-gray-300 group-hover:bg-gray-200 transition-all duration-300">
                         <span className="text-3xl">{category.icon}</span>
                       </div>
                       
                       {/* Category Name */}
-                      <h4 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                      <h4 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-gray-600 transition-colors">
                         {category.name}
                       </h4>
                       
@@ -63,7 +63,7 @@ const Portfolio: React.FC = () => {
                       </p>
                       
                       {/* Project Count */}
-                      <div className="inline-flex items-center px-3 py-1 bg-blue-100 border border-blue-200 text-blue-700 text-sm font-medium">
+                      <div className="inline-flex items-center px-3 py-1 bg-gray-100 border border-gray-300 text-gray-700 text-sm font-medium">
                         {category.count} Project{category.count !== 1 ? 's' : ''}
                       </div>
                     </div>

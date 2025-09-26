@@ -36,7 +36,7 @@ const CategoryPage: React.FC = () => {
           <h1 className="text-4xl font-bold text-white mb-4">Category Not Found</h1>
           <button 
             onClick={handleBackToPortfolio}
-            className="text-cyan-400 hover:text-cyan-300"
+            className="text-gray-600 hover:text-gray-800"
           >
             ← Back to Portfolio
           </button>
@@ -53,7 +53,7 @@ const CategoryPage: React.FC = () => {
           <div className="flex items-center justify-between">
             <button 
               onClick={handleBackToPortfolio}
-              className="text-blue-600 hover:text-blue-700 flex items-center"
+              className="text-gray-600 hover:text-gray-800 flex items-center"
             >
               ← Back to Portfolio
             </button>
@@ -78,7 +78,7 @@ const CategoryPage: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
               {currentCategory.description}
             </p>
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-200 text-blue-700">
+            <div className="inline-flex items-center px-4 py-2 bg-gray-100 border border-gray-300 text-gray-700">
               {categoryProjects.length} Project{categoryProjects.length !== 1 ? 's' : ''}
             </div>
           </motion.div>
@@ -133,10 +133,10 @@ const CategoryPage: React.FC = () => {
                     <div className="absolute top-4 right-4">
                       <span className={`px-3 py-1 text-xs font-semibold border ${
                         project.status === 'Live' 
-                          ? 'bg-green-100 text-green-700 border-green-300'
+                          ? 'bg-gray-200 text-gray-800 border-gray-400'
                           : project.status === 'Development'
-                          ? 'bg-yellow-100 text-yellow-700 border-yellow-300'
-                          : 'bg-blue-100 text-blue-700 border-blue-300'
+                          ? 'bg-gray-100 text-gray-700 border-gray-300'
+                          : 'bg-gray-100 text-gray-700 border-gray-300'
                       }`}>
                         {project.status}
                       </span>
@@ -171,7 +171,7 @@ const CategoryPage: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setSelectedProject(project)}
-                        className="flex-1 py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all duration-300"
+                        className="flex-1 py-3 bg-gray-800 text-white font-semibold hover:bg-gray-900 transition-all duration-300"
                       >
                         Learn More
                       </motion.button>
@@ -221,10 +221,10 @@ const CategoryPage: React.FC = () => {
                     </span>
                     <span className={`px-3 py-1 text-xs font-semibold border ${
                       selectedProject.status === 'Live' 
-                        ? 'bg-green-100 text-green-700 border-green-300'
+                        ? 'bg-gray-200 text-gray-800 border-gray-400'
                         : selectedProject.status === 'Development'
-                        ? 'bg-yellow-100 text-yellow-700 border-yellow-300'
-                        : 'bg-blue-100 text-blue-700 border-blue-300'
+                        ? 'bg-gray-100 text-gray-700 border-gray-300'
+                        : 'bg-gray-100 text-gray-700 border-gray-300'
                     }`}>
                       {selectedProject.status}
                     </span>
@@ -251,7 +251,7 @@ const CategoryPage: React.FC = () => {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {selectedProject.features.map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-600">
-                      <span className="text-green-600 mr-2">✓</span>
+                      <span className="text-gray-600 mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
@@ -288,7 +288,7 @@ const CategoryPage: React.FC = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => window.open(selectedProject.link, '_blank')}
-                    className="px-6 py-3 bg-cyan-600 text-white font-semibold hover:bg-cyan-700 transition-all duration-300"
+                    className="px-6 py-3 bg-gray-800 text-white font-semibold hover:bg-gray-900 transition-all duration-300"
                   >
                     Visit Project
                   </motion.button>

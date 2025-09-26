@@ -17,7 +17,7 @@ const About: React.FC = () => {
           className="text-center mb-16"
         >
               <h2 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
-                About <span className="text-blue-600">TechVitta</span>
+                About <span className="text-gray-600">TechVitta</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             At TechVitta, we're dedicated to demystifying blockchain technology. We focus on small case uses, ensuring that even the most sophisticated blockchain solutions are accessible and practical for everyday business applications.
@@ -82,7 +82,7 @@ const About: React.FC = () => {
                 animate={isInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                    className="glass p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-lg"
+                    className="glass p-6 border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <div className="text-4xl mb-4">{value.icon}</div>
                 <h4 className="text-xl font-bold text-gray-800 mb-2">{value.title}</h4>

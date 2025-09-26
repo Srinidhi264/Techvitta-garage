@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
             className="lg:col-span-2"
           >
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-blue-600 flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gray-800 flex items-center justify-center mr-4">
                 <span className="text-white font-bold text-xl">TV</span>
               </div>
                   <h3 className="text-2xl font-bold text-gray-800">TechVitta</h3>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.2, y: -2 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-12 h-12 glass flex items-center justify-center hover:border-blue-500 transition-all duration-300 border border-gray-300 text-gray-600 hover:text-blue-600"
+                      className="w-12 h-12 glass flex items-center justify-center hover:border-gray-500 transition-all duration-300 border border-gray-300 text-gray-600 hover:text-gray-900"
                     >
                       {social.icon}
                     </motion.a>
