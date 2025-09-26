@@ -16,9 +16,17 @@ const About: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-              <h2 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
-                About <span className="text-blue-600">TechVitta</span>
-              </h2>
+              <div className="relative inline-block">
+                <h2 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
+                  About <span className="text-blue-600">TechVitta</span>
+                </h2>
+                <motion.div
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+                  initial={{ scaleX: 0 }}
+                  animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                />
+              </div>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             At TechVitta, we're dedicated to demystifying blockchain technology. We focus on small case uses, ensuring that even the most sophisticated blockchain solutions are accessible and practical for everyday business applications.
           </p>

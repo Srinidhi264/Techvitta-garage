@@ -16,9 +16,17 @@ const Portfolio: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
-            Our <span className="text-blue-600">Portfolio</span>
-          </h2>
+          <div className="relative inline-block">
+            <h2 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
+              Our <span className="text-blue-600">Portfolio</span>
+            </h2>
+            <motion.div
+              className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+              initial={{ scaleX: 0 }}
+              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            />
+          </div>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
             Explore our diverse portfolio of blockchain solutions, educational platforms, and community-driven applications
           </p>
