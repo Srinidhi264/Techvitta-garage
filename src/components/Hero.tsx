@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="relative mb-12"
           >
-            <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium max-w-2xl">
+            <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium max-w-2xl mx-auto">
               A living portfolio of blockchain apps, community platforms,<br />
               and business tools we've built.
             </p>
