@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
 
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto text-left">
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
         {/* Main Heading */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="relative"
         >
-          <p className="text-2xl lg:text-3xl text-gray-600 mb-16 max-w-4xl leading-relaxed font-medium">
+          <p className="text-2xl lg:text-3xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-medium text-center">
             A living portfolio of blockchain apps, community platforms,<br />
             and business tools we've built.
           </p>
