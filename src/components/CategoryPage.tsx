@@ -109,6 +109,11 @@ const CategoryPage: React.FC = () => {
                 <div className="glass overflow-hidden border border-gray-300 hover:border-gray-500 transition-all duration-300 relative h-full flex flex-col">
                   {/* Project Image */}
                   <div className="relative h-40 overflow-hidden flex-shrink-0">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`} />
                     
                     {/* Category Badge */}
@@ -229,6 +234,11 @@ const CategoryPage: React.FC = () => {
 
               {/* Project Image */}
               <div className="relative h-32 mb-6 overflow-hidden">
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 <div className={`absolute inset-0 bg-gradient-to-br ${selectedProject.gradient} opacity-20`} />
               </div>
 
