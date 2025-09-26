@@ -15,26 +15,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "trustdoc",
-    title: "TrustDoc.in",
-    category: "Blockchain",
-    description: "Decentralized document storage with tamper-proof security and blockchain verification",
-    longDescription: "TrustDoc.in is a revolutionary blockchain-based document storage platform that ensures the integrity and authenticity of your important documents. Using advanced cryptographic techniques and distributed storage, we provide a secure, tamper-proof solution for document management that's perfect for businesses, legal firms, and individuals who need to maintain document authenticity.",
-    image: "/api/placeholder/600/400",
-    link: "https://trustdoc.in",
-    technologies: ["Solidity", "IPFS", "React", "Web3.js", "Ethereum"],
-    gradient: "from-gray-600 to-gray-700",
-    features: [
-      "Tamper-proof document storage",
-      "Blockchain verification",
-      "Decentralized access control",
-      "Immutable audit trail",
-      "Cross-platform compatibility"
-    ],
-    status: "Live",
-    launchDate: "2023"
-  },
-  {
     id: "trustchainvault",
     title: "TrustChainVault.in",
     category: "Blockchain",
