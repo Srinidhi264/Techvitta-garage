@@ -40,7 +40,7 @@ export const projects: Project[] = [
     category: "Business",
     description: "Main corporate website showcasing TechVitta's services and portfolio",
     longDescription: "TechVitta.in is our main corporate website that serves as the central hub for all our services, portfolio, and company information. It provides comprehensive details about our blockchain solutions, team, and contact information for potential clients and partners.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
+    image: "/images/techvitta-preview.jpg",
     link: "https://techvitta.in",
     technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
     gradient: "from-gray-500 to-gray-600",
