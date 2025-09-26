@@ -10,7 +10,8 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
 
   const navItems = [
     { label: 'Portfolio', href: '#portfolio' },
-    { label: 'About', href: '#about' }
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' }
   ]
 
   const isScrolled = scrollY > 50
@@ -27,7 +28,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
           }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -40,8 +41,8 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
             />
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item, index) => (
               <motion.a
                 key={index}
