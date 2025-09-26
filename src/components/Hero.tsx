@@ -38,8 +38,8 @@ const Hero: React.FC = () => {
               <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4 block">
                 Welcome to
               </span>
-              <h1 className="text-7xl lg:text-9xl font-black text-gray-900 leading-none" style={{ textDecoration: 'none' }}>
-                TechVitta <span className="text-6xl lg:text-8xl text-gray-600">Garage</span>
+              <h1 className="text-6xl lg:text-8xl font-black text-gray-900 leading-none whitespace-nowrap" style={{ textDecoration: 'none' }}>
+                TechVitta <span className="text-5xl lg:text-7xl text-gray-600">Garage</span>
               </h1>
             </div>
           </motion.div>
