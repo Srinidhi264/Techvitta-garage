@@ -28,12 +28,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="relative mb-8"
-          >
+          <div className="relative mb-8">
             <div className="inline-block">
               <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4 block">
                 Welcome to
@@ -42,35 +37,16 @@ const Hero: React.FC = () => {
                 TechVitta <span className="text-5xl lg:text-7xl text-gray-600">Garage</span>
               </h1>
             </div>
-          </motion.div>
+          </div>
 
           {/* Subtitle */}
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="relative mb-12"
-          >
+          <div className="relative mb-12">
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium max-w-2xl mx-auto">
               A living portfolio of blockchain apps, community platforms,<br />
               and business tools we've built.
             </p>
-          </motion.div>
+          </div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <button className="px-8 py-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              Explore Projects
-            </button>
-            <button className="px-8 py-4 border-2 border-gray-400 text-gray-700 font-semibold rounded-lg hover:border-gray-600 hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
-              Learn More
-            </button>
-          </motion.div>
         </div>
       </div>
 
