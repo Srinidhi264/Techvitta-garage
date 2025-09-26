@@ -140,7 +140,7 @@ export const projects: Project[] = [
     category: "E-commerce",
     description: "Online marketplace for traditional fish curry and seafood products",
     longDescription: "FishPulusu.com is an online marketplace specializing in traditional fish curry and seafood products. It offers authentic regional fish dishes, spices, and ingredients, bringing traditional flavors to customers' doorsteps with proper packaging and delivery.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
+    image: "/images/fishpulusu-preview.jpg",
     link: "https://fishpulusu.com",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
     gradient: "from-gray-800 to-gray-900",
