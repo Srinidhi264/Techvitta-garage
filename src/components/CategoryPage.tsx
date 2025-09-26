@@ -112,7 +112,9 @@ const CategoryPage: React.FC = () => {
         <img
           src={project.image}
           alt={project.title}
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-0 w-full h-full ${
+            project.id === 'techvitta-main' ? 'object-contain p-4' : 'object-cover'
+          }`}
           onError={(e) => {
             console.log('Image failed to load:', project.image);
             e.currentTarget.style.display = 'none';
