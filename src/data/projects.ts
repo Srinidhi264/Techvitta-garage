@@ -32,7 +32,7 @@ export const projects: Project[] = [
       "Automated security scanning"
     ],
     status: "Live",
-    launchDate: "2023"
+    launchDate: "2025"
   },
   {
     id: "v-dex",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
       "Real-time market data"
     ],
     status: "Live",
-    launchDate: "2024"
+    launchDate: "2025"
   },
   {
     id: "techvitta-main",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
       "Responsive design"
     ],
     status: "Live",
-    launchDate: "2024"
+    launchDate: "2025"
   },
   {
     id: "hrms",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
       "Report generation"
     ],
     status: "Live",
-    launchDate: "2024"
+    launchDate: "2025"
   },
   {
     id: "techvittahms",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
       "Inventory management"
     ],
     status: "Live",
-    launchDate: "2024"
+    launchDate: "2025"
   },
   {
     id: "nurseryshop",
@@ -132,7 +132,7 @@ export const projects: Project[] = [
       "Gardening tips"
     ],
     status: "Live",
-    launchDate: "2024"
+    launchDate: "2025"
   },
   {
     id: "pulasa",
@@ -152,7 +152,7 @@ export const projects: Project[] = [
       "Customer support"
     ],
     status: "Live",
-    launchDate: "2024"
+    launchDate: "2025"
   },
   {
     id: "fishpulusu",
@@ -172,7 +172,7 @@ export const projects: Project[] = [
       "Home delivery"
     ],
     status: "Live",
-    launchDate: "2024"
+    launchDate: "2025"
   },
   {
     id: "macroworkers",
@@ -192,7 +192,7 @@ export const projects: Project[] = [
       "Professional networking"
     ],
     status: "Live",
-    launchDate: "2022"
+    launchDate: "2025"
   },
   {
     id: "macrostudents",
@@ -212,7 +212,7 @@ export const projects: Project[] = [
       "Career guidance resources"
     ],
     status: "Live",
-    launchDate: "2022"
+    launchDate: "2025"
   }
 ]
 
