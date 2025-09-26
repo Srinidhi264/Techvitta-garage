@@ -36,7 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
             <img 
               src="/images/techvitta-preview.jpg" 
               alt="TechVitta Logo" 
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </motion.div>
 
