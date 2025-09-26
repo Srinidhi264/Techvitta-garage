@@ -29,12 +29,12 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="relative mb-8"
           >
-            <div className="inline-block">
+            <div className="text-center">
               <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4 block">
                 Welcome to
               </span>
-              <h1 className="text-6xl lg:text-8xl font-black text-gray-900 leading-none whitespace-nowrap" style={{ textDecoration: 'none' }}>
-                TechVitta <span className="text-5xl lg:text-7xl text-gray-600">Garage</span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-gray-900 leading-tight" style={{ textDecoration: 'none' }}>
+                TechVitta <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-gray-600 block sm:inline">Garage</span>
               </h1>
             </div>
           </motion.div>

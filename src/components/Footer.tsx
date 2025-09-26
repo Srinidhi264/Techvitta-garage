@@ -36,8 +36,7 @@ const Footer: React.FC = () => {
 
   const quickLinks = [
     { name: "About", url: "#about" },
-    { name: "Portfolio", url: "#portfolio" },
-    { name: "FAQ", url: "#faq" }
+    { name: "Portfolio", url: "#portfolio" }
   ]
 
 
@@ -45,39 +44,54 @@ const Footer: React.FC = () => {
         <footer id="contact" className="bg-gray-100 py-16 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           {/* Company Info */}
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-2"
+            className="space-y-6"
           >
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gray-800 flex items-center justify-center mr-4">
-                <span className="text-white font-bold text-xl">TV</span>
+            {/* Company Header */}
+            <div className="flex items-start space-x-4">
+              <div className="w-16 h-16 flex-shrink-0">
+                <img 
+                  src="/images/techvitta-logo-transparent.png" 
+                  alt="TechVitta Innovations Pvt Ltd Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
-                  <h3 className="text-2xl font-bold text-gray-800">TechVitta</h3>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800">TechVitta Innovations Pvt Ltd</h3>
+                <p className="text-sm text-gray-500 mt-1">Blockchain Solutions & Web3 Development</p>
+              </div>
             </div>
-            <p className="text-gray-600 mb-6 leading-relaxed max-w-md">
+            
+            {/* Company Description */}
+            <p className="text-gray-600 leading-relaxed">
               At TechVitta, we're dedicated to demystifying blockchain technology. We focus on small case uses, ensuring that even the most sophisticated blockchain solutions are accessible and practical for everyday business applications.
             </p>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <motion.a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.2, y: -2 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="w-12 h-12 glass flex items-center justify-center hover:border-gray-500 transition-all duration-300 border border-gray-300 text-gray-600 hover:text-gray-900"
-                    >
-                      {social.icon}
-                    </motion.a>
-                  ))}
-                </div>
+            
+            {/* Social Links */}
+            <div>
+              <h4 className="text-sm font-semibold text-gray-800 mb-3">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2, y: -2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-10 h-10 glass flex items-center justify-center hover:border-gray-500 transition-all duration-300 border border-gray-300 text-gray-600 hover:text-gray-900"
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           {/* Quick Links */}
@@ -86,26 +100,48 @@ const Footer: React.FC = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
+            className="lg:pl-8"
           >
-            <h4 className="text-xl font-bold text-gray-900 mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <motion.li
-                  key={index}
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <a
-                    href={link.url}
-                    className="text-gray-600 hover:text-black transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
+            {/* Quick Links and Address - Side by Side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-xl font-bold text-gray-900 mb-6">Quick Links</h4>
+                <ul className="space-y-4">
+                  {quickLinks.map((link, index) => (
+                    <motion.li
+                      key={index}
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <a
+                        href={link.url}
+                        className="text-gray-600 hover:text-black transition-colors duration-300 text-lg"
+                      >
+                        {link.name}
+                      </a>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+              
+              {/* Address and Contact */}
+              <div>
+                <h4 className="text-xl font-bold text-gray-900 mb-6">Address</h4>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  TECHVITTA, 3rd Floor, Plot no 19,<br />
+                  Opp to Cyber pearl, Hitech City,<br />
+                  Madhapur, Hyderabad, Telangana, India
+                </p>
+                
+                {/* Contact - Below Address */}
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Contact</h4>
+                <p className="text-gray-600">
+                  Phone: <a href="tel:+919035151944" className="text-gray-800 hover:text-gray-900 transition-colors">+91 (903) 515-1944</a>
+                </p>
+              </div>
+            </div>
           </motion.div>
-
         </div>
 
         {/* Newsletter Signup */}
@@ -114,23 +150,23 @@ const Footer: React.FC = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="glass p-8 mb-12 border border-gray-300"
+          className="bg-white/80 backdrop-blur-sm p-8 mb-12 border border-gray-200 rounded-lg shadow-sm"
         >
-          <div className="text-center">
+          <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Stay Connected</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-8 leading-relaxed">
               Get the latest blockchain solutions, TechVitta project updates, and practical Web3 insights delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-500 transition-colors duration-300"
+                placeholder="Enter your email address"
+                className="flex-1 px-6 py-4 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-500 focus:ring-2 focus:ring-gray-200 transition-all duration-300"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-black text-white font-semibold hover:bg-gray-800 transition-all duration-300"
+                className="px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 whitespace-nowrap"
               >
                 Subscribe
               </motion.button>
@@ -148,7 +184,7 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-                  © {currentYear} TechVitta. All rights reserved.
+                  © {currentYear} TechVitta Innovations Pvt Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-500 hover:text-black transition-colors duration-300">
