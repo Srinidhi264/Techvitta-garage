@@ -72,13 +72,13 @@ const CategoryPage: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              {currentCategory.icon} {currentCategory.name}
+            <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
+              {currentCategory.name}
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
               {currentCategory.description}
             </p>
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 text-cyan-400">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-200 text-blue-700">
               {categoryProjects.length} Project{categoryProjects.length !== 1 ? 's' : ''}
             </div>
           </motion.div>
@@ -110,26 +110,6 @@ const CategoryPage: React.FC = () => {
                   {/* Project Image */}
                   <div className="relative h-40 overflow-hidden flex-shrink-0">
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`} />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl opacity-50">
-                        {project.id === "trustchainvault" ? "📦" : 
-                         project.id === "v-dex" ? "💱" :
-                         project.id === "techvitta-main" ? "🏢" :
-                         project.id === "hrms" ? "👥" :
-                         project.id === "techvittahms" ? "🏥" :
-                         project.id === "nurseryshop" ? "🌱" :
-                         project.id === "pulasa" ? "🐟" :
-                         project.id === "fishpulusu" ? "🍲" :
-                         project.id === "macroworkers" ? "💼" :
-                         project.id === "macrostudents" ? "🎓" :
-                         project.category === "Blockchain" ? "🔗" : 
-                         project.category === "Community" ? "👥" :
-                         project.category === "Education" ? "🎓" : 
-                         project.category === "Business" ? "💼" :
-                         project.category === "Healthcare" ? "🏥" :
-                         project.category === "E-commerce" ? "🛒" : "💰"}
-                      </div>
-                    </div>
                     
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">
@@ -248,28 +228,8 @@ const CategoryPage: React.FC = () => {
               </div>
 
               {/* Project Image */}
-              <div className="relative h-64 mb-6 overflow-hidden">
+              <div className="relative h-32 mb-6 overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-br ${selectedProject.gradient} opacity-20`} />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-8xl opacity-50">
-                    {selectedProject.id === "trustchainvault" ? "📦" : 
-                     selectedProject.id === "v-dex" ? "💱" :
-                     selectedProject.id === "techvitta-main" ? "🏢" :
-                     selectedProject.id === "hrms" ? "👥" :
-                     selectedProject.id === "techvittahms" ? "🏥" :
-                     selectedProject.id === "nurseryshop" ? "🌱" :
-                     selectedProject.id === "pulasa" ? "🐟" :
-                     selectedProject.id === "fishpulusu" ? "🍲" :
-                     selectedProject.id === "macroworkers" ? "💼" :
-                     selectedProject.id === "macrostudents" ? "🎓" :
-                     selectedProject.category === "Blockchain" ? "🔗" : 
-                     selectedProject.category === "Community" ? "👥" :
-                     selectedProject.category === "Education" ? "🎓" : 
-                     selectedProject.category === "Business" ? "💼" :
-                     selectedProject.category === "Healthcare" ? "🏥" :
-                     selectedProject.category === "E-commerce" ? "🛒" : "💰"}
-                  </div>
-                </div>
               </div>
 
               {/* Project Description */}
