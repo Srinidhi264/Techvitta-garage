@@ -25,12 +25,12 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="max-w-4xl">
+      <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
+        <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
           <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
             className="relative mb-8"
           >
@@ -47,8 +47,8 @@ const Hero: React.FC = () => {
 
           {/* Subtitle */}
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
             className="relative mb-12"
           >
@@ -60,10 +60,10 @@ const Hero: React.FC = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ x: -30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="px-8 py-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               Explore Projects
