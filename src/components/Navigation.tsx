@@ -31,14 +31,13 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3"
+            className="flex items-center"
           >
-            <div className="w-10 h-10 bg-blue-600 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">TV</span>
-            </div>
-            <span className="text-gray-800 font-bold text-xl">
-              TechVitta
-            </span>
+            <img 
+              src="/images/techvitta-preview.jpg" 
+              alt="TechVitta Logo" 
+              className="h-12 w-auto object-contain"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
