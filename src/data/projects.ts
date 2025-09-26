@@ -80,7 +80,7 @@ export const projects: Project[] = [
     category: "Healthcare",
     description: "Hospital Management System for comprehensive healthcare facility management",
     longDescription: "TechVittaHMS.in is a comprehensive Hospital Management System designed to streamline healthcare operations. It provides tools for patient management, appointment scheduling, medical records, billing, and inventory management, helping healthcare facilities operate more efficiently.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
+    image: "/images/hms-preview.jpg",
     link: "https://techvittahms.in",
     technologies: ["React", "Node.js", "PostgreSQL", "Express"],
     gradient: "from-gray-300 to-gray-400",
