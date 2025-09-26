@@ -22,8 +22,8 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
       transition={{ duration: 0.8 }}
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
             isScrolled 
-              ? 'bg-white/95 backdrop-blur-md border-b border-gray-300 shadow-sm' 
-              : 'bg-transparent'
+              ? 'bg-white/98 backdrop-blur-lg border-b border-gray-300 shadow-lg' 
+              : 'bg-white/90 backdrop-blur-md'
           }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
