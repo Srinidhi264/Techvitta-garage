@@ -120,7 +120,7 @@ export const projects: Project[] = [
     category: "E-commerce",
     description: "Specialized e-commerce platform for premium fish and seafood",
     longDescription: "Pulasa.com is a specialized e-commerce platform focused on premium fish and seafood products. It provides fresh, high-quality fish and seafood with proper packaging and delivery, ensuring customers receive the best products for their culinary needs.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
+    image: "/images/pulasa-preview.jpg",
     link: "https://pulasa.com",
     technologies: ["React", "Node.js", "MongoDB", "Payment Gateway"],
     gradient: "from-gray-700 to-gray-800",
