@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Animated Technology Stack */}
+          {/* Animated Process Steps */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -162,30 +162,44 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 4.5 }}
-              className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-6"
+              className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-8"
             >
-              Core Technologies
+              Our Approach
             </motion.h4>
             
-            <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
               {[
-                "Blockchain", "Smart Contracts", "Web3", "DeFi", 
-                "React", "Node.js", "Solidity", "Ethereum"
-              ].map((tech, index) => (
+                { step: "01", title: "Analyze", desc: "Understanding your business needs" },
+                { step: "02", title: "Design", desc: "Creating tailored blockchain solutions" },
+                { step: "03", title: "Develop", desc: "Building with precision and security" },
+                { step: "04", title: "Deploy", desc: "Seamless integration and launch" }
+              ].map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  initial={{ opacity: 0, scale: 0.8, y: 30 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ 
-                    duration: 0.6, 
-                    delay: 4.8 + (index * 0.1),
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    repeatDelay: 3 + (index * 0.5)
+                    duration: 0.8, 
+                    delay: 4.8 + (index * 0.2)
                   }}
-                  className="px-4 py-2 border border-gray-300 bg-white/50 backdrop-blur-sm text-gray-600 text-sm font-medium rounded-full hover:border-gray-400 transition-all duration-300"
+                  className="flex flex-col items-center text-center group"
                 >
-                  {tech}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: 5 + (index * 0.2),
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      repeatDelay: 4
+                    }}
+                    className="w-16 h-16 border-2 border-gray-300 rounded-full flex items-center justify-center mb-4 group-hover:border-gray-400 transition-all duration-300"
+                  >
+                    <span className="text-lg font-bold text-gray-700">{item.step}</span>
+                  </motion.div>
+                  <h5 className="text-sm font-semibold text-gray-700 mb-2">{item.title}</h5>
+                  <p className="text-xs text-gray-500 max-w-32 leading-tight">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
