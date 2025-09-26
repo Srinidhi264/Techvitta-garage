@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
 
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
+      <div className="relative z-10 max-w-7xl mx-auto text-left">
         {/* Main Heading */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative"
         >
-          <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-8 leading-tight" style={{ textDecoration: 'none' }}>
+          <h1 className="text-6xl lg:text-8xl font-bold text-gray-800 mb-8 leading-tight" style={{ textDecoration: 'none' }}>
             TechVitta Garage
           </h1>
         </motion.div>
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="relative"
         >
-          <p className="text-xl lg:text-2xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-medium text-center">
+          <p className="text-2xl lg:text-3xl text-gray-600 mb-16 max-w-4xl leading-relaxed font-medium">
             A living portfolio of blockchain apps, community platforms,<br />
             and business tools we've built.
           </p>
