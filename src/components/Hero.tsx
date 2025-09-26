@@ -58,56 +58,128 @@ const Hero: React.FC = () => {
       {/* Formal Animation Section */}
       <div className="relative z-10 max-w-7xl mx-auto mt-16">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 1.2 }}
+          transition={{ duration: 1.5, delay: 1.2 }}
           className="text-center"
         >
-          {/* Animated Line */}
+          {/* Animated Geometric Pattern */}
           <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 2, delay: 1.5 }}
-            className="w-24 h-0.5 bg-gray-300 mx-auto mb-8 origin-center"
-          />
-          
-          {/* Animated Text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2 }}
-            className="space-y-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.8, delay: 1.5 }}
+            className="relative mb-12"
           >
-            <h3 className="text-lg font-medium text-gray-600 tracking-wider uppercase">
-              Building Tomorrow's Solutions Today
-            </h3>
-            <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
-              Through innovative blockchain technology and community-driven platforms, 
-              we create practical solutions that empower businesses and individuals.
-            </p>
+            <div className="flex justify-center items-center space-x-8">
+              {/* Left Geometric Shape */}
+              <motion.div
+                initial={{ rotate: -180, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                transition={{ duration: 1.2, delay: 1.8 }}
+                className="w-16 h-16 border-2 border-gray-300 transform rotate-45"
+              />
+              
+              {/* Center Circle with Pulsing Ring */}
+              <div className="relative">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.8, delay: 2.2 }}
+                  className="w-20 h-20 border-2 border-gray-400 rounded-full flex items-center justify-center"
+                >
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    className="w-6 h-6 border-2 border-gray-500 rounded-full"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1.5, opacity: 0 }}
+                  transition={{ 
+                    duration: 2, 
+                    delay: 2.5, 
+                    repeat: Infinity, 
+                    repeatDelay: 3 
+                  }}
+                  className="absolute inset-0 border border-gray-300 rounded-full"
+                />
+              </div>
+              
+              {/* Right Geometric Shape */}
+              <motion.div
+                initial={{ rotate: 180, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                transition={{ duration: 1.2, delay: 1.8 }}
+                className="w-16 h-16 border-2 border-gray-300 transform rotate-45"
+              />
+            </div>
           </motion.div>
 
-          {/* Animated Dots */}
+          {/* Animated Text with Typewriter Effect */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 2.5 }}
-            className="flex justify-center space-x-2 mt-8"
+            transition={{ duration: 1, delay: 2.8 }}
+            className="space-y-6"
           >
-            {[0, 1, 2].map((index) => (
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 3 }}
+              className="text-xl font-semibold text-gray-700 tracking-wide"
+            >
+              INNOVATION • INTEGRITY • IMPACT
+            </motion.h3>
+            
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 3.3 }}
+              className="max-w-3xl mx-auto"
+            >
+              <p className="text-base text-gray-600 leading-relaxed mb-4">
+                Transforming complex blockchain technology into accessible, 
+                practical solutions that drive real-world value.
+              </p>
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 2, delay: 3.8 }}
+                className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Animated Progress Indicators */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 4.2 }}
+            className="flex justify-center space-x-8 mt-12"
+          >
+            {[
+              { label: "Projects", value: 8 },
+              { label: "Years", value: 3 },
+              { label: "Clients", value: 50 }
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ 
-                  duration: 0.3, 
-                  delay: 2.7 + (index * 0.1),
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  repeatDelay: 1
-                }}
-                className="w-2 h-2 bg-gray-400 rounded-full"
-              />
+                transition={{ duration: 0.6, delay: 4.5 + (index * 0.2) }}
+                className="text-center"
+              >
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.8, delay: 4.8 + (index * 0.2) }}
+                  className="w-16 h-16 border-2 border-gray-300 rounded-full flex items-center justify-center mb-2"
+                >
+                  <span className="text-lg font-bold text-gray-700">{item.value}+</span>
+                </motion.div>
+                <span className="text-xs text-gray-500 uppercase tracking-wider">{item.label}</span>
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>
