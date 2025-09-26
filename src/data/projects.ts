@@ -100,7 +100,7 @@ export const projects: Project[] = [
     category: "E-commerce",
     description: "Online nursery and plant shop for gardening enthusiasts",
     longDescription: "NurseryShop.in is an e-commerce platform specializing in plants, gardening tools, and nursery supplies. It provides a comprehensive online shopping experience for gardening enthusiasts, offering a wide variety of plants, seeds, tools, and expert advice for successful gardening.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
+    image: "/images/nurseryshop-preview.jpg",
     link: "https://nurseryshop.in",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     gradient: "from-gray-600 to-gray-700",
