@@ -5,7 +5,6 @@ import { Environment } from '@react-three/drei'
 import Hero from './components/Hero'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import LoadingScreen from './components/LoadingScreen'
@@ -66,7 +65,6 @@ function App() {
               <Hero />
               <About />
               <Portfolio />
-              <Contact />
               <Footer />
             </div>
           </div>

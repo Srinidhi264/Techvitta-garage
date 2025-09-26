@@ -62,6 +62,32 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Remove any underlines */
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none !important;
+}
+
+h1::after, h1::before,
+h2::after, h2::before,
+h3::after, h3::before {
+  display: none !important;
+}
+
+/* Hide scroll indicators */
+.scroll-indicator,
+.scroll-down,
+.scroll-to-explore,
+[class*="scroll-indicator"],
+[class*="scroll-down"] {
+  display: none !important;
+}
+
+/* Remove any gradient underlines */
+.gradient-underline,
+[class*="gradient-underline"] {
+  display: none !important;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

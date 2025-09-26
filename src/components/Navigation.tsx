@@ -9,9 +9,8 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { label: 'Portfolio', href: '#portfolio', icon: '💼' },
-    { label: 'About', href: '#about', icon: 'ℹ️' },
-    { label: 'Contact', href: '#contact', icon: '📧' }
+    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'About', href: '#about' }
   ]
 
   const isScrolled = scrollY > 50
@@ -32,41 +31,26 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3 group"
+            className="flex items-center space-x-3"
           >
-            <motion.div 
-              className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300"
-              whileHover={{ rotate: 5 }}
-            >
-              <span className="text-white font-bold text-xl">TV</span>
-            </motion.div>
-            <div className="flex flex-col">
-              <span className="text-gray-800 font-bold text-xl group-hover:text-blue-600 transition-colors duration-300">
-                TechVitta
-              </span>
-              <span className="text-xs text-gray-500 font-medium -mt-1">
-                Garage
-              </span>
+            <div className="w-10 h-10 bg-blue-600 flex items-center justify-center">
+              <span className="text-white font-bold text-lg">TV</span>
             </div>
+            <span className="text-gray-800 font-bold text-xl">
+              TechVitta
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.a
                 key={index}
                 href={item.href}
                 whileHover={{ y: -2 }}
-                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium relative group rounded-lg hover:bg-blue-50"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium relative group"
               >
-                <span className="text-lg">{item.icon}</span>
-                <span>{item.label}</span>
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
+                {item.label}
               </motion.a>
             ))}
           </div>
@@ -76,18 +60,11 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-3 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-300"
+                className="lg:hidden p-2 text-gray-700"
           >
-            <motion.svg 
-              className="w-6 h-6" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-              animate={{ rotate: isMenuOpen ? 90 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </motion.svg>
+            </svg>
           </motion.button>
         </div>
 
@@ -98,17 +75,16 @@ const Navigation: React.FC<NavigationProps> = ({ scrollY }) => {
           transition={{ duration: 0.3 }}
           className="lg:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-2">
+          <div className="py-4 space-y-4">
             {navItems.map((item, index) => (
               <motion.a
                 key={index}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 whileHover={{ x: 5 }}
-                className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium rounded-lg"
+                className="block text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium"
               >
-                <span className="text-lg">{item.icon}</span>
-                <span>{item.label}</span>
+                {item.label}
               </motion.a>
             ))}
           </div>
