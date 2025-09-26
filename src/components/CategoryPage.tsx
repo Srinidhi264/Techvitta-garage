@@ -58,7 +58,7 @@ const CategoryPage: React.FC = () => {
               ← Back to Portfolio
             </button>
             <div className="text-gray-800 font-bold text-xl">
-              {currentCategory.icon} {currentCategory.name}
+              {currentCategory.name}
             </div>
           </div>
         </div>
