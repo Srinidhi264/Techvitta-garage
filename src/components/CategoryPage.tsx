@@ -113,6 +113,10 @@ const CategoryPage: React.FC = () => {
                       src={project.image} 
                       alt={project.title}
                       className="absolute inset-0 w-full h-full object-cover"
+                      onError={(e) => {
+                        console.log('Image failed to load:', project.image);
+                        e.currentTarget.style.display = 'none';
+                      }}
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`} />
                     
@@ -232,15 +236,6 @@ const CategoryPage: React.FC = () => {
                 </button>
               </div>
 
-              {/* Project Image */}
-              <div className="relative h-32 mb-6 overflow-hidden">
-                <img 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-br ${selectedProject.gradient} opacity-20`} />
-              </div>
 
               {/* Project Description */}
               <div className="mb-6">

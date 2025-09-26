@@ -20,7 +20,7 @@ export const projects: Project[] = [
     category: "Blockchain",
     description: "Decentralized exchange platform enabling secure and efficient token trading with advanced liquidity management",
     longDescription: "V-Dex is a cutting-edge decentralized exchange that provides secure, efficient token trading with advanced liquidity management features. Built on the latest DeFi protocols, it offers users a seamless trading experience while maintaining the highest security standards and providing innovative liquidity solutions.",
-    image: "/images/v-dex-preview.jpg",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
     link: "https://temp-v-dex-website-main.vercel.app",
     technologies: ["Solidity", "Web3.js", "React", "Uniswap", "Chainlink"],
     gradient: "from-gray-800 to-gray-900",
