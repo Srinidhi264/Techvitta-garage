@@ -15,26 +15,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "trustchainvault",
-    title: "TrustChainVault.in",
-    category: "Blockchain",
-    description: "Decentralized repository storage ensuring trust and auditability for code repositories",
-    longDescription: "TrustChainVault.in provides secure, decentralized storage for code repositories with blockchain-based verification. This platform ensures that your code remains tamper-proof and provides an immutable audit trail of all changes, making it perfect for open-source projects, enterprise development, and compliance requirements.",
-    image: "/api/placeholder/600/400",
-    link: "https://trustchainvault.in",
-    technologies: ["Solidity", "Git", "Node.js", "Ethereum", "IPFS"],
-    gradient: "from-gray-500 to-gray-600",
-    features: [
-      "Decentralized code storage",
-      "Immutable version history",
-      "Smart contract verification",
-      "Collaborative development tools",
-      "Automated security scanning"
-    ],
-    status: "Live",
-    launchDate: "2025"
-  },
-  {
     id: "v-dex",
     title: "V-Dex",
     category: "Blockchain",
