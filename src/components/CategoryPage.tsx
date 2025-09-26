@@ -112,7 +112,7 @@ const CategoryPage: React.FC = () => {
         <img
           src={project.image}
           alt={project.title}
-          className="absolute inset-0 w-full h-full object-cover -mt-2"
+          className="absolute inset-0 w-full h-full object-cover"
           onError={(e) => {
             console.log('Image failed to load:', project.image);
             e.currentTarget.style.display = 'none';

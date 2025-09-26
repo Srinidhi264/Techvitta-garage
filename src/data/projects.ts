@@ -160,7 +160,7 @@ export const projects: Project[] = [
     category: "Community",
     description: "Task marketplace connecting professionals with micro and macro opportunities to earn and grow",
     longDescription: "Macroworkers.com is a comprehensive task marketplace that bridges the gap between skilled professionals and businesses seeking specific expertise. Our platform facilitates both micro and macro opportunities, enabling professionals to find work that matches their skills and schedule while helping businesses access top talent efficiently.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=center",
+    image: "/images/macroworkers-preview.jpg",
     link: "https://macroworkers.com",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
     gradient: "from-gray-400 to-gray-500",
