@@ -7,35 +7,35 @@ const projects = [
     id: 'trustdoc',
     title: 'TrustDoc.in',
     description: 'Decentralized document storage',
-    position: [-3, 0, 0],
+    position: [-3, 0, 0] as [number, number, number],
     color: '#4facfe'
   },
   {
     id: 'trustchainvault',
     title: 'TrustChainVault.in',
     description: 'Decentralized repository storage',
-    position: [0, 0, 0],
+    position: [0, 0, 0] as [number, number, number],
     color: '#00f2fe'
   },
   {
     id: 'macroworkers',
     title: 'Macroworkers.com',
     description: 'Task marketplace for professionals',
-    position: [3, 0, 0],
+    position: [3, 0, 0] as [number, number, number],
     color: '#667eea'
   },
   {
     id: 'macrostudents',
     title: 'Macrostudents.com',
     description: 'Students + Colleges platform',
-    position: [-1.5, -2, 0],
+    position: [-1.5, -2, 0] as [number, number, number],
     color: '#764ba2'
   },
   {
     id: 'blockchain-health',
     title: 'Blockchain Health Reports',
     description: 'Hospital management with blockchain',
-    position: [1.5, -2, 0],
+    position: [1.5, -2, 0] as [number, number, number],
     color: '#4facfe'
   }
 ]

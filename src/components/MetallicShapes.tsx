@@ -3,50 +3,50 @@ import { useFrame } from '@react-three/fiber'
 import { Mesh } from 'three'
 
 const MetallicShapes: React.FC = () => {
-  const shapes = [
-    { 
-      position: [6, 2, -3], 
-      rotation: [0, 0, 0], 
-      scale: [1.2, 1.2, 1.2],
-      color: "#4facfe",
-      geometry: "box"
-    },
-    { 
-      position: [8, -1, -5], 
-      rotation: [0, Math.PI / 4, 0], 
-      scale: [0.8, 1.5, 0.8],
-      color: "#764ba2",
-      geometry: "box"
-    },
-    { 
-      position: [4, 3, -4], 
-      rotation: [Math.PI / 6, 0, Math.PI / 3], 
-      scale: [1, 1, 1],
-      color: "#667eea",
-      geometry: "octahedron"
-    },
-    { 
-      position: [7, -3, -6], 
-      rotation: [0, Math.PI / 2, 0], 
-      scale: [0.6, 0.6, 0.6],
-      color: "#f093fb",
-      geometry: "sphere"
-    },
-    { 
-      position: [5, 1, -2], 
-      rotation: [Math.PI / 4, Math.PI / 4, 0], 
-      scale: [1.4, 0.8, 1.4],
-      color: "#4facfe",
-      geometry: "box"
-    },
-    { 
-      position: [9, 0, -7], 
-      rotation: [0, 0, Math.PI / 6], 
-      scale: [0.9, 0.9, 0.9],
-      color: "#667eea",
-      geometry: "tetrahedron"
-    }
-  ]
+const shapes = [
+  { 
+    position: [6, 2, -3] as [number, number, number], 
+    rotation: [0, 0, 0] as [number, number, number], 
+    scale: [1.2, 1.2, 1.2] as [number, number, number],
+    color: "#4facfe",
+    geometry: "box"
+  },
+  { 
+    position: [8, -1, -5] as [number, number, number], 
+    rotation: [0, Math.PI / 4, 0] as [number, number, number], 
+    scale: [0.8, 1.5, 0.8] as [number, number, number],
+    color: "#764ba2",
+    geometry: "box"
+  },
+  { 
+    position: [4, 3, -4] as [number, number, number], 
+    rotation: [Math.PI / 6, 0, Math.PI / 3] as [number, number, number], 
+    scale: [1, 1, 1] as [number, number, number],
+    color: "#667eea",
+    geometry: "octahedron"
+  },
+  { 
+    position: [7, -3, -6] as [number, number, number], 
+    rotation: [0, Math.PI / 2, 0] as [number, number, number], 
+    scale: [0.6, 0.6, 0.6] as [number, number, number],
+    color: "#f093fb",
+    geometry: "sphere"
+  },
+  { 
+    position: [5, 1, -2] as [number, number, number], 
+    rotation: [Math.PI / 4, Math.PI / 4, 0] as [number, number, number], 
+    scale: [1.4, 0.8, 1.4] as [number, number, number],
+    color: "#4facfe",
+    geometry: "box"
+  },
+  { 
+    position: [9, 0, -7] as [number, number, number], 
+    rotation: [0, 0, Math.PI / 6] as [number, number, number], 
+    scale: [0.9, 0.9, 0.9] as [number, number, number],
+    color: "#667eea",
+    geometry: "tetrahedron"
+  }
+]
 
   return (
     <>
