@@ -216,24 +216,24 @@ const CategoryPage: React.FC = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-600"
+            className="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-200"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-8">
               {/* Modal Header */}
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h3>
+                  <h3 className="text-3xl font-bold text-gray-800 mb-2">{selectedProject.title}</h3>
                   <div className="flex items-center gap-4">
-                    <span className="px-3 py-1 bg-gray-800 text-gray-200 text-sm font-semibold border border-gray-600">
+                    <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-semibold border border-gray-300">
                       {selectedProject.category}
                     </span>
                     <span className={`px-3 py-1 text-xs font-semibold border ${
                       selectedProject.status === 'Live' 
-                        ? 'bg-green-900/80 text-green-200 border-green-600'
+                        ? 'bg-green-100 text-green-700 border-green-300'
                         : selectedProject.status === 'Development'
-                        ? 'bg-yellow-900/80 text-yellow-200 border-yellow-600'
-                        : 'bg-blue-900/80 text-blue-200 border-blue-600'
+                        ? 'bg-yellow-100 text-yellow-700 border-yellow-300'
+                        : 'bg-blue-100 text-blue-700 border-blue-300'
                     }`}>
                       {selectedProject.status}
                     </span>
@@ -241,7 +241,7 @@ const CategoryPage: React.FC = () => {
                 </div>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="text-gray-400 hover:text-white text-2xl"
+                  className="text-gray-600 hover:text-gray-800 text-2xl"
                 >
                   ×
                 </button>
@@ -274,17 +274,17 @@ const CategoryPage: React.FC = () => {
 
               {/* Project Description */}
               <div className="mb-6">
-                <h4 className="text-xl font-bold text-white mb-3">Description</h4>
-                <p className="text-gray-300 leading-relaxed">{selectedProject.longDescription}</p>
+                <h4 className="text-xl font-bold text-gray-800 mb-3">Description</h4>
+                <p className="text-gray-600 leading-relaxed">{selectedProject.longDescription}</p>
               </div>
 
               {/* Features */}
               <div className="mb-6">
-                <h4 className="text-xl font-bold text-white mb-3">Key Features</h4>
+                <h4 className="text-xl font-bold text-gray-800 mb-3">Key Features</h4>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {selectedProject.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <span className="text-cyan-400 mr-2">✓</span>
+                    <li key={index} className="flex items-center text-gray-600">
+                      <span className="text-green-600 mr-2">✓</span>
                       {feature}
                     </li>
                   ))}
@@ -293,12 +293,12 @@ const CategoryPage: React.FC = () => {
 
               {/* Technologies */}
               <div className="mb-6">
-                <h4 className="text-xl font-bold text-white mb-3">Technologies Used</h4>
+                <h4 className="text-xl font-bold text-gray-800 mb-3">Technologies Used</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-700 text-gray-200 text-sm border border-gray-600"
+                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm border border-gray-300"
                     >
                       {tech}
                     </span>
@@ -309,8 +309,8 @@ const CategoryPage: React.FC = () => {
               {/* Launch Date */}
               {selectedProject.launchDate && (
                 <div className="mb-6">
-                  <h4 className="text-xl font-bold text-white mb-3">Launch Date</h4>
-                  <p className="text-gray-300">{selectedProject.launchDate}</p>
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Launch Date</h4>
+                  <p className="text-gray-600">{selectedProject.launchDate}</p>
                 </div>
               )}
 
@@ -330,7 +330,7 @@ const CategoryPage: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedProject(null)}
-                  className="px-6 py-3 bg-gray-700 text-white font-semibold hover:bg-gray-600 transition-all duration-300"
+                  className="px-6 py-3 bg-gray-200 text-gray-800 font-semibold hover:bg-gray-300 transition-all duration-300"
                 >
                   Close
                 </motion.button>
